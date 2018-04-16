@@ -17,6 +17,15 @@ the reads oriented away from one another (“outie”). Sometimes this library s
 mate-pair instead of paired-end. The short_jump insert size is 3500 bp, and the read length is
 37 bp. We will use this library on Thursday to scaffold our assembled contigs. 
 
+## 0. Note on ieng6 cluster for today
+
+Note, today **please log onto `ieng6-700.ucsd.edu`** e.g.:
+```
+ssh user@ieng6-700.ucsd.edu
+```
+
+since otherwise you won't be able to use the plotting tools in part 3.
+
 ## 1. Inspect the data and run fastqc
 
 First, to get set up clone your github repository for this week to your home directory in a directory called `week3`.
