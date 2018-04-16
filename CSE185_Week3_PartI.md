@@ -28,7 +28,7 @@ cp ../public/week3/*.fastq week3/
 
 The data for this week's lab is in the `public/week3` and consists of four fastq files (`frag_1.fastq`, `frag_2.fastq`, `short_jump_1.fastq`, `short_jump_2.fastq`). Copy these to your `week3` directory (copying fastq files is not generally a good practice, but some of the tools we'll run today require the files to be in a directory where you have write permissions.)
 
-Use `wc -l` to determine the number of reads in each raw data file. Record it in your notebook. Then run `fastqc` on all four of the fastq files. As in previous labs, use `scp` to retrieve the html files and save screenshots of the per base read quality for each file.
+Use `wc -l` to determine the number of reads in each raw data file. Record it in your notebook. Then run `fastqc` on all four of the fastq files and view the results.
 
 Wow! That data is pretty bad. We will use a k-mer based approach to error correction to clean up the
 small insert library (`frag_1.fastq` & `frag_2.fastq`). You’ll explore the k-mer distribution in the next
@@ -130,7 +130,7 @@ plt.show()
 plt.savefig("frag_1_31.pdf")
 ```
 
-Exit Ipython by typing `ctrl-D` and answering `y` to the prompt asking if you want to exit. When you exit, you should see a pdf file in your working directory. Use `scp` to open it on your desktop; save it for your lab report, and answer the IClicker question.
+Exit Ipython by typing `ctrl-D` and answering `y` to the prompt asking if you want to exit. When you exit, you should see a pdf file in your working directory. To retrieve the pdf file, you can either use `scp` as in previous labs, or better, you can use `git add` to upload that to your repository and view it from Github. Either way, view the pdf file and answer the IClicker question. 
 
 Reopen the actual `.histo` file with `cat`, and find the bin (“number of times that k-mer appears”) that
 corresponds to small valley in the figure. Record this “initial valley point” in your lab notebook and answer the IClicker question.
