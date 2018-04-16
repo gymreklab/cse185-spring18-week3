@@ -39,13 +39,13 @@ But before moving on, let's look at the state of our git repository, which is a 
 git status
 ```
 
-You'll likely see that your lab notebook has some modifications that aren't yet committed. But you'll also see all of the fastqc output files (`.zip` and `.html`) listed under "Untracked files". We don't actually plan on tracking these files with git, and it is a bit annoying to have those keep appearing when we type `git status`. We can tell git a list of files to ignore by adding a file called `.gitignore`. Open a new file:
+You'll likely see that your lab notebook has some modifications that aren't yet committed. But you'll also see all of the fastqc output files (`.zip`) as well as the `.fastq` files listed under "Untracked files". We don't actually plan on tracking these files with git, and it is a bit annoying to have those keep appearing when we type `git status`. We can tell git a list of files to ignore by adding a file called `.gitignore`. Open a new file:
 ```
 emacs .gitignore
 ```
 And add the following lines:
 ```
-*.html
+*.fastq
 *.zip
 ```
 Type `ctrl-x ctrl-s` to save and `ctrl-x ctrl-c` to exit. Now add the gitignore file, commit, and push your changes:
@@ -54,6 +54,8 @@ git add .gitignore
 git commit -a -m"Adding gitignore file to the repository"
 git push
 ```
+
+Note, you'll also see the html files from `fastqc` there. This is something you should reference in your lab report so it would be a good idea to include those in your repository to refer to later. Keeping track of them in github will be easier than using `scp` to move the files back and forth.
 
 <blockquote>
 **UNIX TIP**: Save your work frequently! It is a good idea to type "ctrl-x ctrl-s" (if using Emacs) often (I do it subconsciously literally every minute or so) to make sure you don't lose your work. If you are using Emacs and by chance forgot to save your work before exiting, you can often find the unsaved changes in a temporary file ending with a "~" in the same directory.
