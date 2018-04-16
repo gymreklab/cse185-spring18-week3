@@ -125,6 +125,7 @@ ipython
 First we'll load `pandas`, a popular library for manipulating tables of data in python, and `matplotlib` for creating plots:
 
 ```python
+import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 ```
@@ -135,7 +136,6 @@ Now load the data and create a histogram. Note there are many resources online t
 plt.figure()
 r31 = pd.read_csv("31.histo", sep=" ", names=["kmercount", "number"])
 plt.bar(r31.iloc[1:100,]["kmercount"], r31.iloc[1:100,]["number"]);
-plt.show()
 plt.savefig("frag_1_31.pdf")
 ```
 
