@@ -19,9 +19,9 @@ mate-pair instead of paired-end. The short_jump insert size is 3500 bp, and the 
 
 ## 0. Note on ieng6 cluster for today
 
-Note, today **please log onto `ieng6-700.ucsd.edu`** e.g.:
+Note, today **please log onto `ieng6-700.ucsd.edu`** and allow X-forwarding, e.g.:
 ```
-ssh user@ieng6-700.ucsd.edu
+ssh -X user@ieng6-700.ucsd.edu
 ```
 
 since otherwise you won't be able to use the plotting tools in part 3.
@@ -37,7 +37,7 @@ cp ../public/week3/*.fastq week3/
 
 The data for this week's lab is in the `public/week3` and consists of four fastq files (`frag_1.fastq`, `frag_2.fastq`, `short_jump_1.fastq`, `short_jump_2.fastq`). Copy these to your `week3` directory (copying fastq files is not generally a good practice, but some of the tools we'll run today require the files to be in a directory where you have write permissions.)
 
-Use `wc -l` to determine the number of reads in each raw data file. Record it in your notebook. Then run `fastqc` on all four of the fastq files and view the results.
+Use `wc -l` to determine the number of reads in each raw data file. Record it in your notebook. Then run `fastqc` on all four of the fastq files and view the results. Save the output somewhere so you can include the plot in your lab report.
 
 Wow! That data is pretty bad. We will use a k-mer based approach to error correction to clean up the
 small insert library (`frag_1.fastq` & `frag_2.fastq`). You’ll explore the k-mer distribution in the next
