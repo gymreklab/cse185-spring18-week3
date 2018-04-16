@@ -117,13 +117,12 @@ novo assembly pipeline. Be sure to state what you did and why, and state your ov
 situations where it can have a significant impact. Briefly summarize the data you are using in this
 study (what organism is it from, why are we using it, how the library is set up). 
 
-*Methods*: Summarize each step of the analysis, and be sure to include non default parameters and
-awk scripts. 
+*Methods*: Summarize each step of the analysis, and be sure to include non default parameters. Remember, don't directly include commands in this section, but give enough description for someone to understand what you did. Your lab notebook should contain the exact commands that were run.
 
 *Results:*
 You will have a lot of figures (the fastqc output, histogram plots). Also
 include a table that shows the number of contigs, max contig length, and N50 for each step of your
-analysis. Be sure to include text that explains each result (ie say things like “Minia was used to
+analysis (i.e., after contig assembly, after scaffolding with and without trimming the short jump library, and after gap filling). Be sure to include text that explains each result (ie say things like “Minia was used to
 assemble overlapping reads from the small insert library into contigs, and the results are shown in
 table 1.”
 
