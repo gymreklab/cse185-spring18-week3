@@ -225,15 +225,15 @@ Genome_size = T/N
 
 (N: Depth of coverage, M: Kmer peak, K: Kmer-size, L: avg readlength T: Total bases)
 
-Recall that we calculated the kmer distribution using only the first pairs, so only use numbers for the first fastq file. Record the calculated genome size.
+Recall that we calculated the kmer distribution using only the first pairs, so only use numbers for the first fastq file. Record the calculated genome size and include in your lab report.
 
-The actual length of the Staph aureus genome is around 3 million bp. How close were you? If you didn't that (which we didn't), hypothesize why you might have over or under estimated the genome size. Include your result and hypothesis in your lab report.
+#### Optional extra credit
+The actual length of the Staph aureus genome is around 3 million bp. How close were you? If you didn't get that (which we didn't! we're not quite sure why but have some ideas), hypothesize why you might have over or under estimated the genome size. Include your result and hypothesis in your lab report.
 
 ## 6. Assemble reads with minia
 
-Now we are ready to start assembling our reads. Unfortunately, while `SOAPdenovo2` is still a widely
-used tool for denovo assembly, it is too much of a memory hog to run on our ieng6 servers. So we will
-use a lightweight program called minia instead. 
+Now we are ready to start assembling our reads. We will
+use a lightweight program called minia for this. 
 
 `minia` needs a list of our files as input, so use emacs to make a list like before, with one line listing each
 of the *corrected* files.
