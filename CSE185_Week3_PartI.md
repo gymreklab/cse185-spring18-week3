@@ -31,7 +31,7 @@ since otherwise you won't be able to use the plotting tools in part 3.
 First, to get set up clone your github repository for this week to your home directory in a directory called `week3`.
 
 ```
-git clone https://github.com/cse185-sp18/cse185-week2-<username>.git week3
+git clone https://github.com/cse185-sp18/cse185-week3-<username>.git week3
 cp ../public/week3/*.fastq week3/
 ```
 
